@@ -1,0 +1,165 @@
+body {
+	margin: 0;
+	padding: 0;
+	margin-top: 3%;
+	font-family: 'Open Sans', sans-serif;
+}
+
+header {
+	width: 100%;
+	margin: auto;
+}
+.tags{
+	display: inline-block;
+	padding: 10px;
+	background-color: pink;
+	margin: 1rem 2rem 2rem 0rem;
+}
+#news-template {
+	margin: auto;
+	margin: auto;
+	max-width: 85%;
+	display: flex;
+	flex-direction: row;
+}
+@media (max-width: 900px) {
+	#news-template {
+		margin: auto;
+		margin: auto;
+		max-width: 90%;
+		display: flex;
+		flex-direction: column;
+	}
+}
+main{
+	display: block;
+	width: 50%;
+}
+@media (max-width: 900px) {
+	main{
+		display: block;
+		width: 100%;
+	}
+}
+
+.relatedStories{
+	margin-top: 10%;
+	margin-left: 15%;
+	display: inline-block;
+	width: 30%;
+}
+@media (max-width: 900px) {
+	.relatedStories{
+		margin-top: 0%;
+		margin-left: 2%;
+
+		display: inline-block;
+		width: 100%;
+	}
+}
+
+.relatedStory{
+	margin-bottom: 20px;
+}
+
+li{
+	font-size: 20px;
+
+}
+
+@media (max-width: 900px) {
+	li{
+		font-size: 15px;
+		padding:1rem;
+
+	}
+}
+.teaser {
+
+	margin-top: 50px;
+	font-size: 1.5rem;
+	line-height: 2rem;
+	color: gray;
+	border-style: dotted;
+
+}
+
+#caption {
+	font-style: italic;
+	font-size: 15px;
+	margin-bottom: .5rem;
+}
+ul {
+	display: flex;
+	flex-direction: column;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
+
+@media (max-width: 900px) {
+	ul {
+		display: flex;
+		flex-direction: row;
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+		width: 100%;
+	}
+}
+img {
+	display: block;
+	width: 100%;
+	max-width: 800px;
+	filter: saturate(2.5);
+}
+h1 
+{
+	font-family: 'Bebas Neue', cursive;
+	line-height: 50px;
+	font-size: 55px;
+	margin: 0;
+	width: 100%;
+}
+
+@media (max-width: 900px) {
+	h1 {
+		font-family: 'Bebas Neue', cursive;
+		line-height: 50px;
+		font-size: 60px;
+		margin: 0;
+		width: 100%;
+	}
+}
+
+h2 {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 300;
+	font-size: 25px;
+	color:gray;
+}
+
+h3 {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 15px;
+	font-style: bold;
+
+}
+
+h4 {
+	font-size: 30px;
+	font-family: 'Bebas Neue', cursive;
+}
+a {
+
+	display: block;
+}
+
+
+
+
+
+
+
+

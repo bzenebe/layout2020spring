@@ -1,4 +1,55 @@
 
+main {
+	display: flex;
+	flex-direction: column;
+}
+
+@media (min-width: 960px){
+
+	main {
+		flex-direction: row;
+	}
+}
+
+@media (min-width: 1500px){
+
+	main {
+		flex-direction: row;
+	}
+}
+/*helps to manage white space, so things will remain alligned vertically */
+.container {
+	padding-left: 1em;
+	padding-right: 1em;
+}
+
+ul {
+	margin: 1em 0;
+}
+li{
+
+	margin: .5em 0;
+}
+/*treat first and last a little differently */
+li:first-child{
+
+margin-top: 0;	
+}
+
+li:last-child {
+	margin-bottom: 0;
+}
+/*grab first thing inside ul*/
+ul>*:first-child{
+
+margin-top: 0;	
+}
+
+ul>*:last-child {
+	margin-bottom: 0;
+}
+
+
 body{
 	display: inline-block;
 	position: relative;
@@ -54,6 +105,7 @@ p {
 	font-size: 18px;
 	padding-top: 23px;
 	font-family: 'Open Sans', sans-serif;
+	margin: 0 0 .5em 0;
 }
 
 
