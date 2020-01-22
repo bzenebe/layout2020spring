@@ -15,6 +15,16 @@ header {
 	background-color: pink;
 	margin: 1rem 2rem 2rem 0rem;
 }
+@media (max-width: 900px) {
+	.tags{
+		font-size: 15px;
+	display: inline-block;
+	padding: 4px;
+	background-color: pink;
+	margin: .5rem .8rem .5rem 0rem;
+}
+}
+
 #news-template {
 	margin: auto;
 	margin: auto;
@@ -127,7 +137,7 @@ h1
 	h1 {
 		font-family: 'Bebas Neue', cursive;
 		line-height: 50px;
-		font-size: 60px;
+		font-size: 50px;
 		margin: 0;
 		width: 100%;
 	}
@@ -135,9 +145,17 @@ h1
 
 h2 {
 	font-family: 'Open Sans', sans-serif;
-	font-weight: 300;
+	
 	font-size: 25px;
 	color:gray;
+}
+@media (max-width: 900px) {
+	h2 {
+		font-family: 'Open Sans', sans-serif;
+	
+	font-size: 20px;
+	color:gray;
+	}
 }
 
 h3 {
@@ -153,7 +171,7 @@ h4 {
 }
 a {
 
-	display: block;
+	
 }
 
 
