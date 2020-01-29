@@ -51,6 +51,7 @@ main{
 li{
 	font-size: 18px;
 	width: 40%;
+	color: white;
 	display: flex;
 	flex-direction: column;
 	padding: 2% 2% 2% 2%;

@@ -53,24 +53,23 @@ main{
 
 
 li{
-	font-family: 'Open Sans', sans-serif;
-	font-size: 17px;
-	padding-bottom: 20px;
+	font-size: 18px;
 	width: 40%;
+	color: white;
 	display: flex;
 	flex-direction: column;
-	
+	padding: 2% 2% 2% 2%;
 	margin: .5em 0;
 }
 
 li > :first-child  {
 
-	padding-bottom: 20px;
+	padding-bottom: 60px;
 }
 
 .relatedStory > :first-child  {
 
-	padding-bottom: 20px;
+	padding-bottom: 60px;
 }
 ul {
 	flex-wrap: wrap;
