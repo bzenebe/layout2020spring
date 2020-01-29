@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/styles2.css">
   <title>News Story Template</title>
   <link href="https://fonts.googleapis.com/css?family=Anton&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Anton|Bebas+Neue&display=swap" rel="stylesheet">
@@ -15,12 +15,13 @@
   <!-- Main Story -->
   <div id="news-template" v-cloak>
     
-    <h1>{{ story.title }}</h1> 
+    
     <header class="component">
         <img v-bind:src="story.image.url" class="headerImg">
+
         <div class="safe-area">
-          <a v-bind:href="story.source.url" class="source-name">{{ story.source.name }}</a>
           
+          <h1>{{ story.title }}</h1> 
         </div>
 
       </header>
@@ -28,6 +29,7 @@
        <main>
 
       <div class="caption">{{ story.image.caption }}</div>
+      <a v-bind:href="story.source.url" class="source-name">{{ story.source.name }}</a>
         <h3 class="date">{{ story.date }}</h3>
       
       
