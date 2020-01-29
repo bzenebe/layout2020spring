@@ -51,10 +51,9 @@ main{
 }
 
 .relatedStories{
-	margin-top: 10%;
-	margin-left: 15%;
+	margin: auto;
 	display: inline-block;
-	width: 30%;
+	width: 80%;
 }
 @media (max-width: 900px) {
 	.relatedStories{
@@ -67,14 +66,19 @@ main{
 
 .relatedStory{
 	margin-bottom: 20px;
+	
+	margin-right: 10px;
 }
 
-li{
+div.li{
 	font-size: 20px;
-	margin-right: 40px;
-
+	
 }
 
+.li {
+	padding: 20px;
+	justify-content: space-between;
+}
 @media (max-width: 900px) {
 	li{
 		font-size: 15px;
@@ -95,6 +99,7 @@ li{
 	font-style: italic;
 	font-size: 15px;
 	margin-bottom: .5rem;
+	margin-top: .5rem;
 }
 ul {
 	display: flex;
@@ -103,6 +108,7 @@ ul {
 	margin: 0;
 	padding: 40;
 	width: 100%;
+	justify-content: space-between;
 }
 
 @media (max-width: 900px) {
@@ -153,7 +159,6 @@ h2 {
 		font-family: 'Open Sans', sans-serif;
 	color: white;
 	font-size: 20px;
-	color:gray;
 	padding: 0px 0px 0px 5px;
 	}
 }
