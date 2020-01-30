@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>News Story Template</title>
+    <style>[v-cloak] { display: none; }</style>
+    <link href="https://fonts.googleapis.com/css?family=Baskervville&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Frank+Ruhl+Libre&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=M+PLUS+1p&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=M+PLUS+1p|Prata&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Viga&display=swap" rel="stylesheet">
+
+  </head>
+  <body>
+
+
+
+
+
+<main>
+  <article>
+    <p>
+      <ul>
+        <li></li>
+      </ul>
+    </p>
+  </article>
+
+
+</main>
+
+
+
+
+
+
+
+    <article class="relatedStory"></article>
+    <div id="news-template" v-cloak>
+      <div id="navi"></div>
+      <!-- Main Story -->
+      <div id="h1a"><h1>{{ story.title }}</h1></div>
+     <subtitle> {{ story.subtitle }}</subtitle>
+     <date> {{ story.date }}</date>
+      <tags><span v-for="tag in story.tags">{{ tag }}</span></tags>
+      <div id="img1"><img v-bind:src="story.image.url"></div>
+      <subtitlea>{{ story.image.caption }}
+      <a v-bind:href="story.source.url">{{ story.source.name }}</a></subtitlea>
+      <span v-html="story.teaser"></span>
+      <span v-html="story.content"></span>
+
+      <!-- Related Stories-->
+      <div id="related"> 
+      <ul>
+        <rtext>Related Stories</rtext>
+        <li v-for="relatedStory in relatedStories">
+          <div v-on:click="load(relatedStory)">
+            <subtitlea>{{ relatedStory.title }}</subtitlea>
+            <img v-bind:src="relatedStory.image.url">
+          </div>
+        </li>
+      </ul>
+      </div>
+
+      <!-- Useful debugging info, you can comment this section out when you don't need it. -->
+      <!-- <pre>The story object: {{ story | json }}</pre> -->
+      <!-- <pre>The relatedStories array: {{ relatedStories | json }}</pre> -->
+
+    </div>
+    <!-- Scripts here are what load the Vue library, and the actual story content. -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://abesiemsen.github.io/layout2020spring-resources/projects/news-story-template/data.js"></script>
+  </body>
+</html>
+
+ None of my friends have ever asked me for any baking supplies or sheets. I barely even had friends come over to the apartment. If you feel accused, I think it's because 

@@ -1,15 +1,15 @@
 {
   "entrypoints": [
     {
-      "name": "Simple",
+      "name": "Bold",
       "file": "index1.html"
     },
     {
-      "name": "Narrow",
+      "name": "Soft",
       "file": "index2.html"
     },
     {
-      "name": "Wide",
+      "name": "Formal",
       "file": "index3.html"
     }
   ]

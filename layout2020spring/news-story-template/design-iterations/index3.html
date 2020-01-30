@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/styles3.css">
   <title>News Story Template</title>
   <link href="https://fonts.googleapis.com/css?family=Anton&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Anton|Bebas+Neue&display=swap" rel="stylesheet">
@@ -14,20 +14,46 @@
 <body>
   <!-- Main Story -->
   <div id="news-template" v-cloak>
-    
+    <a v-bind:href="story.source.url" class="source-name">{{ story.source.name }}</a>
+    <h1>{{ story.title }}</h1> 
+    <header class="component">
+        <img v-bind:src="story.image.url" class="headerImg">
+        <div class="safe-area">
+          
+          
+        </div>
+
+      </header>
+      
+       <main>
+
+      <div class="caption">{{ story.image.caption }}</div>
+        <h3 class="date">{{ story.date }}</h3>
+      
+      
+      </section>
+      <span v-html="story.teaser" class="teaser"></span>
+      </section>
+      </section>
+      <span v-html="story.content" class="content"></span>
+      </section>
+<span v-for="tag in story.tags" class="tags">{{ tag }}</span>
+    </main>
+
+    <!-- Related Stories--><h4>Related Stories</h4>
     <aside class="relatedStories">
       
       <ul class="relatedStory" >
         <li v-for="relatedStory in relatedStories" class="relatedStory">
           <div v-on:click="load(relatedStory)" class="storyImg">
-            <div class="related-story-title">
             {{ relatedStory.title }}
-            </div>
             <img v-bind:src="relatedStory.image.url">
           </div>
         </li>
       </ul>
     </aside>
+
+
 
     <!-- Useful debugging info, you can comment this section out when you don't need it. -->
     <!-- <pre>The story object: {{ story | json }}</pre> -->
