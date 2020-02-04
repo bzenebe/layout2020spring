@@ -1,4 +1,48 @@
+
 body {
+	margin: 0;
+	width: 90%;
+	max-width: 960px;
+	margin: auto;
+}
+
+.related-story img {
+	width: 100%;
+	position: absolute;
+	height: 100%;
+	object-fit: cover;
+}
+
+.related-stories {
+	display: flex;
+	flex-wrap: wrap;
+	padding: 0;
+	margin: 0;
+	margin: 20px -20px;
+}
+
+.related-story{
+	display: block;
+	width: 20%;
+	min-width: 240px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	margin: 20px;
+	/*property flex goes on item. there are three different
+	values provided. flex shrink, flex grow, flex basis. 
+	play with numbers to grow and shrink in different proportions. */
+	/*you can also fix numbers so it can grow up until a thing etc. */
+	flex: 1 1 auto;
+	padding: 20px;
+	border:1px solid;
+}
+
+.related-story .thumbnail {
+	padding-bottom: 60%;
+	position: relative;
+}
+/*b*//*ody {
 	margin: 0;
 	font-family: 'Open Sans', sans-serif;
 	background-color: lightgray;
@@ -178,7 +222,7 @@ img {
 }
 header.component {
 	/*padding:0;*/
-	min-height: 400px;
+/*	min-height: 400px;
 	position: relative;
 	object-position: center;
 	width: 100%;
@@ -224,11 +268,11 @@ header.component img{
 .safe-area > :last-child {
 	margin-bottom: 0;
 }
+*/
 
 
 
-
-
+*/
 
 
 

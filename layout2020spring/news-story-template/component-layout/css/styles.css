@@ -64,9 +64,8 @@ main{
 		width: 100%;
 	}
 }
-
-.relatedStory{
-	margin-bottom: 20px;
+.related-story-title{
+	font-size: 15px;
 }
 
 li{
