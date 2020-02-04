@@ -8,8 +8,13 @@ body {
 	font-family: 'Open Sans', sans-serif;
 }
 
-hr {
+@media only screen and (min-width: 700px) {
+	body{
+		max-width: 100%;
+	}
+}
 
+hr {
 	border: 6px solid;
 	color: black;
 }
@@ -19,7 +24,7 @@ hr {
 	position: absolute;
 	height: 100%;
 	object-fit: cover;
-transition-duration: 0.3s;
+	transition-duration: 0.3s;
 }
 
 .related-stories {
@@ -29,21 +34,28 @@ transition-duration: 0.3s;
 	margin: 0;
 	margin: 0px -20px;
 }
+@media only screen and (min-width: 700px) {
+	.related-stories {
+	width: 80%;
+	margin: auto;
+}
+	}
 
 .related-story{
 	display: block;
-	width: 30%;
+	width: 40%;
 	min-width: 240px;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-	margin: 0px;
 	/*property flex goes on item. there are three different
 	values provided. flex shrink, flex grow, flex basis. 
 	play with numbers to grow and shrink in different proportions. */
 	/*you can also fix numbers so it can grow up until a thing etc. */
 	flex: 1 1 auto;
-	padding: 25px;
+	padding: 0px;
+	background-color: black;
+	margin: 30px;
 
 }
 
@@ -63,20 +75,25 @@ transition-duration: 0.3s;
 	font-size: 22px;
 	font-family: 'Oranienbaum', serif;
 	line-height: 25px;
-	margin: 5px;
-
+	margin: 15px;
+	color: white;
 }
+
 
 main{
 	display: block;
 	width: 90%;
 	margin: auto;
 }
+@media only screen and (min-width: 700px) {
+	main {
+		width: 70%;
+	}
+}
 
 h1 {	
 	font-family: 'Oranienbaum', serif;
 	position: block;
-	max-width: 1000px;
 	width: 90%;
 	font-size: 40px;
 	line-height: 50px;
@@ -85,22 +102,40 @@ h1 {
 	
 }
 
+@media only screen and (min-width: 700px) {
+	h1 {
+		width: 70%;
+		margin: auto;
+		margin-top: 2%;
+	}
+}
+
 h2 {
 	font-family: 'Open Sans', sans-serif;
+	position: block;
 	font-size: 19px;
-	line-height: 23px;
-	max-width: 70%;
+	line-height: 25px;
+	width: 80%;
 	font-weight: bold;
-	position: static;
-	padding: 0px 15px 15px 15px;
+	color: gray;
+	padding: 0px 15px 3px 15px;
+	margin:10px 10px;
 
+}
+
+@media only screen and (min-width: 700px) {
+	h2 {
+		max-width: 65%;
+		margin: auto;
+		width: 60%;
+		padding: 20px;
+	}
 }
 
 
 h3 {
 	font-family: 'Open Sans', sans-serif;
 	font-size: 17px;
-	font-style: bold;
 	display: inline;
 	width: 20px;
 	padding-right: 10px;
@@ -113,10 +148,11 @@ h4 {
 	position: relative;
 	margin-top: 20px;
 	text-align: center;
+	color: black;
 }
 
 h5 {
-font-family: 'Bebas Neue', cursive;
+	font-family: 'Bebas Neue', cursive;
 	font-size: 17px;
 	width: 20px;
 	display: inline;
@@ -125,7 +161,7 @@ font-family: 'Bebas Neue', cursive;
 
 
 .content {
-font-family: 'Open Sans', sans-serif;
+	font-family: 'Open Sans', sans-serif;
 	margin: auto;
 	margin-top: 30px;
 	margin-bottom: 30px;
@@ -141,7 +177,7 @@ p {
 	font-size: 28px;
 	width: 100%;
 	display: inline-block;
-font-family: 'Oranienbaum', serif;
+	font-family: 'Oranienbaum', serif;
 
 }
 
@@ -155,7 +191,7 @@ font-family: 'Oranienbaum', serif;
 	text-align: center;
 	padding: 15px 0px 15px 0px;
 	display: inline-block;
-text-decoration: none;
+	text-decoration: none;
 
 }
 
@@ -164,6 +200,7 @@ text-decoration: none;
 	display: inline-block;
 	padding: 4px;
 	padding: 5px 30px 5px 30px;
+	color: black;
 
 }
 
@@ -179,7 +216,7 @@ header.component .safe-area {
 	position: relative;
 	min-height: 500px;
 	width: 90%;
-	max-width: 1500px;
+	max-width: 2000px;
 
 }
 header.component img{
@@ -201,33 +238,33 @@ header.component img{
 }
 
 .fa {
-  padding: 20px;
-  margin-right: 20px;
-  margin-top: 10px;
-  font-size: 50px;
-  width: 50px;
-  text-align: center;
-  text-decoration: none;
+	padding: 20px;
+	margin-right: 20px;
+	margin-top: 10px;
+	font-size: 50px;
+	width: 50px;
+	text-align: center;
+	text-decoration: none;
 
 }
 
 /* Add a hover effect if you want */
 .fa:hover {
-  opacity: 0.7;
+	opacity: 0.7;
 }
 
 /* Set a specific color for each brand */
 
 /* Facebook */
 .fa-facebook {
-  background: #3B5998;
-  color: white;
+	background: #3B5998;
+	color: white;
 }
 
 /* Twitter */
 .fa-twitter {
-  background: #55ACEE;
-  color: white;
+	background: #55ACEE;
+	color: white;
 }
 
 

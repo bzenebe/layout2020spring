@@ -26,6 +26,7 @@
   <div id="news-template" v-cloak>
 <a v-bind:href="story.source.url" class="source-name">{{ story.source.name }}</a> 
     <h1>{{ story.title }}</h1> 
+    <h2>{{ story.subtitle }}</h2>
     <header class="component">
       <img v-bind:src="story.image.url" class="main-image">
       <div class="safe-area">
