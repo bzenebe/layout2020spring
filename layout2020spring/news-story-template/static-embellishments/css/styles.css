@@ -25,6 +25,7 @@ hr {
 	height: 100%;
 	object-fit: cover;
 	transition-duration: 0.3s;
+	object-position: center top;
 }
 
 .related-stories {
@@ -34,7 +35,7 @@ hr {
 	margin: 0;
 	margin: 0px -20px;
 }
-@media only screen and (min-width: 700px) {
+@media only screen and (min-width: 900px) {
 	.related-stories {
 	width: 80%;
 	margin: auto;
@@ -55,7 +56,7 @@ hr {
 	flex: 1 1 auto;
 	padding: 0px;
 	background-color: black;
-	margin: 30px;
+	margin: 20px 20px 20px 20px;
 
 }
 
@@ -68,6 +69,7 @@ hr {
 .related-story .thumbnail {
 	padding-bottom: 60%;
 	position: relative;
+
 }
 
 
@@ -173,7 +175,7 @@ p {
 }
 
 .teaser {
-	line-height: 34px;
+	line-height: 36px;
 	font-size: 28px;
 	width: 100%;
 	display: inline-block;
@@ -196,11 +198,15 @@ p {
 }
 
 .tags{
-	font-size: 19px;
+	font-size: 16px;
 	display: inline-block;
 	padding: 4px;
-	padding: 5px 30px 5px 30px;
+	padding: 8px 30px 8px 30px;
 	color: black;
+	text-transform: underline;
+	background-color: black;
+	color: white;
+	text-transform: uppercase;
 
 }
 
@@ -210,6 +216,13 @@ header.component {
 	position: relative;
 	object-position: center;
 	width: 100%;
+}
+
+@media only screen and (min-width: 700px) {
+	header.component {
+		width: 80%;
+	margin:auto;
+	}
 }
 
 header.component .safe-area {
@@ -227,6 +240,7 @@ header.component img{
 	height: 100%;
 	object-fit: cover;
 	margin:auto;
+	object-position: center top;
 }
 
 
@@ -266,39 +280,6 @@ header.component img{
 	background: #55ACEE;
 	color: white;
 }
-
-
-
-/*li{
-	font-size: 18px;
-	width: 40%;
-	color: white;
-	display: flex;
-	flex-direction: column;
-	padding: 2% 2% 2% 2%;
-	margin: .5em 0;
-}
-
-li > :first-child  {
-
-	padding-bottom: 60px;
-}
-
-.relatedStory > :first-child  {
-
-	padding-bottom: 60px;
-}
-ul {
-	flex-wrap: wrap;
-	display: flex;
-	flex-direction: row;
-	list-style-type: none;
-	margin: 1em 0;
-	padding: 0;
-	width: 100%;
-}
-*/
-
 
 
 
