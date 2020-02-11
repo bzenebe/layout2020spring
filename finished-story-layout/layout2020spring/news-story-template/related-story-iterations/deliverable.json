@@ -1,0 +1,16 @@
+{
+  "entrypoints": [
+    {
+      "name": "Simple",
+      "file": "index1.html"
+    },
+    {
+      "name": "Narrow",
+      "file": "index2.html"
+    },
+    {
+      "name": "Wide",
+      "file": "index3.html"
+    }
+  ]
+}

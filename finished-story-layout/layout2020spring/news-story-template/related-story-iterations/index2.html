@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/styles2.css">
+  <title>News Story Template</title>
+  <link href="https://fonts.googleapis.com/css?family=Anton&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Anton|Bebas+Neue&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Cabin&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Playfair+Display&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Main Story -->
+  <div id="news-template" v-cloak>
+    
+    <!-- Related Stories--><h4>Related Stories</h4>
+    <aside class="relatedStories">
+      
+      <ul class="relatedStory" >
+        <li v-for="relatedStory in relatedStories" class="relatedStory">
+          <div v-on:click="load(relatedStory)" class="storyImg">
+            <div class="related-story-title">
+            {{ relatedStory.title }}
+            </div>
+            <img v-bind:src="relatedStory.image.url">
+          </div>
+        </li>
+      </ul>
+    </aside>
+
+    <!-- Useful debugging info, you can comment this section out when you don't need it. -->
+    <!-- <pre>The story object: {{ story | json }}</pre> -->
+    <!-- <pre>The relatedStories array: {{ relatedStories | json }}</pre> -->
+
+  </div>
+  <!-- Scripts here are what load the Vue library, and the actual story content. -->
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="https://abesiemsen.github.io/layout2020spring-resources/projects/news-story-template/data.js"></script>
+</body>
+</html>
+

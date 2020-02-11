@@ -1,0 +1,288 @@
+
+main {
+	display: flex;
+	flex-direction: column;
+}
+
+@media (min-width: 960px){
+
+	main {
+		flex-direction: row;
+	}
+}
+
+@media (min-width: 1500px){
+
+	main {
+		flex-direction: row;
+	}
+}
+/*helps to manage white space, so things will remain alligned vertically */
+.container {
+	padding-left: 1em;
+	padding-right: 1em;
+}
+
+ul {
+	margin: 1em 0;
+}
+li{
+
+	margin: .5em 0;
+}
+/*treat first and last a little differently */
+li:first-child{
+
+margin-top: 0;	
+}
+
+li:last-child {
+	margin-bottom: 0;
+}
+/*grab first thing inside ul*/
+ul>*:first-child{
+
+margin-top: 0;	
+}
+
+ul>*:last-child {
+	margin-bottom: 0;
+}
+
+
+body{
+	display: inline-block;
+	position: relative;
+
+}
+
+
+img {
+	display: block;
+	margin-left: 7%;
+	margin-right: auto;
+	width: 40%;
+	-webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+	filter: brightness(100%);
+	filter: contrast(150%);
+
+}
+
+navi{
+
+	background-color: blue;
+	width: 100%;
+	height: 5%;
+	top:0;
+}
+
+h1 {
+
+	display: block;
+	margin-left: 7%;
+	margin-right: auto;
+	width: 60%;
+	text-align: left;
+	margin-top:5%;
+	margin-bottom: 20px;
+	font-size: 60px;
+	line-height: 60px;
+	letter-spacing: 2px;
+	font-family: Arial;
+	font-weight: bold;
+
+}
+
+
+
+p {
+
+	width: 40%;
+	display: block;
+	margin-left: 15%;
+	margin-right: auto;
+	text-align: left;
+	font-size: 18px;
+	padding-top: 23px;
+	font-family: 'Open Sans', sans-serif;
+	margin: 0 0 .5em 0;
+}
+
+
+subtitle {
+	width: 45%;
+	display: block;
+	margin-left: 7%;
+	margin-right: auto;
+	text-align: left;
+	font-size: 22px;
+	line-height: 26px;
+	color: gray;
+	font-family: Arial;
+}
+
+subtitlea {
+	width: 40%;
+	display: block;
+	margin-left: 7%;
+	margin-right: auto;
+	padding-bottom: 20px;
+	margin-top: 20px;
+	text-align: left;
+	font-size: 17px;
+	line-height: 22px;
+	color: gray;
+	font-family: Arial;
+}
+
+date{
+	width: 40%;
+	display: block;
+	margin-left: 7%;
+	margin-right: auto;
+	margin-top: 20px;
+	text-align: left;
+	font-size: 15px;
+	color: black;
+	font-family: Arial;
+	font-weight: bold;
+	display: inline-block;
+
+}
+tag{
+	margin-left: 5px;
+}
+
+tags {
+	width: 40%;
+	display: block;
+	margin-left: -5%;
+	margin-right: auto;
+	margin-top: 10px;
+	margin-bottom: 20px;
+	text-align: left;
+	font-size: 15px;
+	color: blue;
+	font-family: Arial;
+	display: inline-block;
+
+}
+
+
+ul {
+	margin: 0;
+	font-family: Arial;
+	font-weight: bold;
+	height: auto;
+	width: 60%;
+	position: fixed;
+	margin-left: 60%;
+	margin-top: 17%;
+	display: inline;
+	top: 0; <-- adjust accordingly
+	right: 0; <-- adjust accordingly
+	list-style-type: none;
+	list-style-type: none;
+}
+
+rtext {
+	margin-left: 10%;
+	margin-right: auto;
+	text-decoration: underline;
+}
+
+/*body {
+	left: 25%;
+	line-height: 0;
+	font-family: 'Open Sans', sans-serif;
+	margin-left: 6%;
+}
+
+img {
+
+	width: 50%;
+	bottom: 30%;
+	top: 30%;
+	display: block;
+	float: none;
+	-webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 *//**/
+  /*filter: grayscale(100%);
+}
+h1 {
+	left: 10%;
+	margin-top: 8%;
+	width: 70%;
+	font-size: 50px;
+	line-height: 60px;
+	font-family: 'Baskervville', serif;
+	color: #3399ff;
+	letter-spacing: .1px;
+}
+.h1a {
+position: fixed;
+
+}
+subtitle {
+	margin-top: 0;
+	font-size: 18px;
+	color: gray;
+	line-height: 10px;
+	font-family: 'Open Sans', sans-serif;
+	display: block;
+}
+date {
+	font-size: 15px;
+	color: gray;
+	line-height: 10px;
+	font-family: 'Open Sans', sans-serif;
+	display: block;
+	margin-top: 40px;
+
+}
+captiona {
+	margin-top:10px;
+	line-height: :10px;
+	font-size: 9.8px;
+}
+sourcea {
+	margin-top:10px;
+	line-height: :10px;
+	font-size: 9.8px;
+}
+
+span {
+	font-size: 15px;
+	color: gray;
+	line-height: 10px;
+	font-family: 'Open Sans', sans-serif;
+	display: inline-block;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+ text {
+	font-size: 15px;
+	color: black;
+	line-height: 10px;
+	font-family: 'Open Sans', sans-serif;
+	display: block;
+}
+
+
+
+
+p {
+	color: black;
+	width: 40%;
+	line-height: 25px;
+	font-size: 16px;
+	font-family: 'Open Sans', sans-serif;
+	left: 20%;
+	display: block;
+	top:70%;
+	margin-left: 7%;
+}
+
+pre {
+
+	width: 50%;
+	}*/
