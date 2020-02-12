@@ -92,19 +92,7 @@ main{
 		width: 70%;
 	}
 }
-
-h1 {	
-	font-family: 'Oranienbaum', serif;
-	position: block;
-	width: 90%;
-	font-size: 40px;
-	line-height: 50px;
-	margin: auto;
-	margin:10px 10px;
-	
-}
-
-@media only screen and (min-width: 700px) {
+nly screen and (min-width: 700px) {
 	h1 {
 		width: 70%;
 		margin: auto;
@@ -282,6 +270,11 @@ header.component img{
 }
 
 
+
+
+/*25e8fd blue*/
+/*ff108b red*/
+/* ffeb3e yellow*/
 
 
 
