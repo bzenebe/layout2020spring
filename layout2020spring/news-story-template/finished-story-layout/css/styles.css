@@ -15,7 +15,8 @@ body {
 }
 
 hr {
-	border: 6px solid;
+	border: 3px solid;
+	margin: 5px 0px;
 	color: black;
 }
 
@@ -92,13 +93,23 @@ main{
 		width: 70%;
 	}
 }
-nly screen and (min-width: 700px) {
+
+	h1 {
+		font-size: 40px;
+		width: 90%;
+		margin: auto;
+		margin: 10px 10px;
+		margin-top: 2%;
+	}
+
+	@media only screen and (min-width: 700px) {
 	h1 {
 		width: 70%;
 		margin: auto;
-		margin-top: 2%;
 	}
 }
+
+
 
 h2 {
 	font-family: 'Open Sans', sans-serif;

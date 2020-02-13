@@ -1,17 +1,26 @@
 
+
+
 body {
-	margin: 0;
 	width: 100%;
-	max-width: 960px;
-	margin: auto;
-	color: black;
-	font-family: 'Open Sans', sans-serif;
-	background-color: #E4E4E4;
+	margin: none;
 }
 
 img {
-	height: 300px;
+
+	
 }
+
+img.img {
+	width: 20px;
+	margin: 5%;
+}
+
+
+
+/*25e8fd blue*/
+/*ff108b red*/
+/* ffeb3e yellow*/
 
 
 
