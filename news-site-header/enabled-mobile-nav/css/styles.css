@@ -271,14 +271,25 @@ margin left: 0px;
 text-decoration: none;
 color: black;
 background-color: #6f72ce;
-
+ border-bottom: 2px solid white;
 
 }
 
 ul {
-	margin: 0;
+	margin:0;
 	padding: 0;
 }
+
+div.sign-in a{
+
+	background-color: #4a4b94;
+
+}
+
+
+
+
+
 
 .tags{
 	font-size: 16px;
