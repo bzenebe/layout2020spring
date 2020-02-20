@@ -27,25 +27,108 @@
   <!-- Site Header -->
   <header id="news-site-header">
     <div v-on:click="toggleTheHamburgerMenu()">
-      <div class="ham"></div>
-      <div class="ham"></div>
-      <div class="ham"></div>
+      <div class="ham1"></div>
+      <div class="ham2"></div>
+      <div class="ham3"></div>
     </div>
-    <div v-show="menuIsOpen">
+    <!--  <div class="menu-container" v-bind:class="{ 'menu-is-open': menuIsOpen }">
+        <nav>
+          <ul>
+            <li class="expandable">
+              <a href="#">News</a>
+              <ul>
+                <li>
+                  <a href="#">Headlines</a>
+                </li>
+                <li>
+                  <a href="#">Politics</a>
+                </li>
+                <li>
+                  <a href="#">Science</a>
+                </li>
+                <li>
+                  <a href="#">Entertainment</a>
+                </li>
+              </ul>
+            </li>
+            <li class="expandable">
+              <a href="#">Opinion</a>
+              <ul>
+                <li>
+                  <a href="#">Columns</a>
+                </li>
+                <li>
+                  <a href="#">Letters</a>
+                </li>
+              </ul>
+            </li>
+            <li class="expandable">
+              <a href="#">Sports</a>
+              <ul>
+                <li>
+                  <a href="#">Baseball</a>
+                </li>
+                <li>
+                  <a href="#">Football</a>
+                </li>
+                <li>
+                  <a href="#">Basketball</a>
+                </li>
+                <li>
+                  <a href="#">Hockey</a>
+                </li>
+                <li>
+                  <a href="#">Soccer</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </div> -->
+    <div class="menu-container" v-bind:class="{ 'menu-is-open': menuIsOpen }">
       <nav>
         <ul>
-          <li class="menu-items">
-            <div class="sign-in"><a href="sign-in">Sign In</a></div>
-            
+          
+          
+        
+          <li class="expandable">
+            <div class="sign-in"><a href="sign-in">SUBSCRIBE</a></div>
+          </li>
+          <li class="expandable">
             <a href="#">US</a>
+          </li>
+          <li class="expandable">
             <a href="#">World</a>
+          </li>
+          <li class="expandable">
             <a href="#">Politics</a>
+          </li>
+          <li class="expandable">
             <a href="#">Style</a>
+          </li>
+          <li class="expandable">
             <a href="#">Beauty</a>
+          </li>
+          <li class="expandable">
             <a href="#">Sports</a>
+          </li>
+          <li class="expandable">
             <a href="#">Science</a>
+          </li>
+          <li class="expandable">
             <a href="#">Tech</a>
+          </li>
+          <li class="expandable">
             <a href="#">Fashion</a>
+          </li>
+          <li class="expandable">
+            <a href="#">Business</a>
+          </li> s
+          <li class="expandable">
+            <a href="#">Videos</a>
+          </li>
+          <li class="expandable">
+            <a href="#">Coupons</a>
           </li>
         </ul>
       </nav>
@@ -142,6 +225,57 @@
   })
 </script>
 
+<script>
+  
+
+// var expandables = document.getElementsByClassName('expandable');
+
+// // for every line in expandable we will define xpandable. will run once for every item matched above
+// // trigger element with element a, give back results. querying asking for reference to a tag
+// // if there's a click on this element, make function go
+// for (let expandable of expandables) {
+//   let triggerElement = expandable.querySelector('a')
+//   triggerElement.addEventListener('click', function(event){
+
+//     event.preventDefault();
+//     expandable.classList.toggle('expanded')
+//   })
+
+  
+// }
+
+// function closeAllExcept(clickedExpandable){
+//   for(let expandable of expandables){
+//     if (expandable !== clickedExpandable){
+//       expandable.classlist.remove('expanded')
+//     }
+//   }
+// }
+
+<script>
+      
+      var expandables = document.getElementsByClassName('expandable');
+      
+      for (let expandable of expandables) {
+        let triggerElement = expandable.querySelector('a');
+        triggerElement.addEventListener('click', function(event) {
+          event.preventDefault();
+          closeAllExcept(expandable);
+          expandable.classList.toggle('expanded');
+        })
+      }
+
+      function closeAllExcept(clickedExpandable) {
+        for (let expandable of expandables) {
+          if (expandable !== clickedExpandable) {
+            expandable.classList.remove('expanded')
+          }
+        }
+      }
+
+    </script>
+
+</script>
 
 </body>
 </html>
