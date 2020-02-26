@@ -16,9 +16,9 @@
   <link href="https://fonts.googleapis.com/css?family=Scheherazade&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Oranienbaum&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Cormorant+Infant&display=swap" rel="stylesheet">
-  <script src="https://kit.fontawesome.com/e2c53b87fa.js" crossorigin="anonymous"></script>
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
+
 
 </head>
 <body>
@@ -26,133 +26,109 @@
 
   <!-- Site Header -->
   <header id="news-site-header">
-    <div class="site-name">TheBubble</div>
     <div v-on:click="toggleTheHamburgerMenu()">
-      <div class="ham"><i class="fas fa-bars"></i></div>
-      
+      <div class="ham1"></div>
+      <div class="ham2"></div>
+      <div class="ham3"></div>
     </div>
-
+    <!--  <div class="menu-container" v-bind:class="{ 'menu-is-open': menuIsOpen }">
+        <nav>
+          <ul>
+            <li class="expandable">
+              <a href="#">News</a>
+              <ul>
+                <li>
+                  <a href="#">Headlines</a>
+                </li>
+                <li>
+                  <a href="#">Politics</a>
+                </li>
+                <li>
+                  <a href="#">Science</a>
+                </li>
+                <li>
+                  <a href="#">Entertainment</a>
+                </li>
+              </ul>
+            </li>
+            <li class="expandable">
+              <a href="#">Opinion</a>
+              <ul>
+                <li>
+                  <a href="#">Columns</a>
+                </li>
+                <li>
+                  <a href="#">Letters</a>
+                </li>
+              </ul>
+            </li>
+            <li class="expandable">
+              <a href="#">Sports</a>
+              <ul>
+                <li>
+                  <a href="#">Baseball</a>
+                </li>
+                <li>
+                  <a href="#">Football</a>
+                </li>
+                <li>
+                  <a href="#">Basketball</a>
+                </li>
+                <li>
+                  <a href="#">Hockey</a>
+                </li>
+                <li>
+                  <a href="#">Soccer</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </div> -->
     <div class="menu-container" v-bind:class="{ 'menu-is-open': menuIsOpen }">
       <nav>
-        <ul class="menu-items">
+        <ul>
+          
+          
+        
           <li class="expandable">
             <div class="sign-in"><a href="sign-in">SUBSCRIBE</a></div>
           </li>
-
           <li class="expandable">
-            <div id="menu-item"><a href="#">News</a></div>
-            <ul>
-              <li>
-                <a href="#">Headlines</a>
-              </li>
-              <li>
-                <a href="#">Elections</a>
-              </li>
-              <li>
-                <a href="#">Climate Change</a>
-              </li>
-              <li>
-                <a href="#">Economy</a>
-              </li>
-            </ul>
-          </li>
-           <li class="expandable">
-            <div class="menu-item"><a href="#">Entertainment</a></div>
-            <ul>
-              <li>
-                <a href="#">Films</a>
-              </li>
-              <li>
-                <a href="#">Music</a>
-              </li>
-              <li>
-                <a href="#">Games</a>
-              </li>
-            </ul>
-          </li>
-
- <li class="expandable">
-            <div class="menu-item"><a href="#">Sports</a></div>
-            <ul>
-              <li>
-                <a href="#">Basketball</a>
-              </li>
-              <li>
-                <a href="#">Football</a>
-              </li>
-              <li>
-                <a href="#">Soccer</a>
-              </li>
-              <li>
-                <a href="#">Hockey</a>
-              </li>
-            </ul>
-          </li>
-
-           <li class="expandable">
-            <div class="menu-item"><a href="#">Lifestyle</a></div>
-            <ul>
-              <li>
-                <a href="#">Beauty</a>
-              </li>
-              <li>
-                <a href="#">Fashion</a>
-              </li>
-              <li>
-                <a href="#">Interior Design</a>
-              </li>
-              <li>
-                <a href="#">Culture</a>
-              </li>
-            </ul>
-          </li>
-           <li class="expandable">
-            <div class="menu-item"><a href="#">World</a></div>
-            <ul>
-              <li>
-                <a href="#">Headlines</a>
-              </li>
-              <li>
-                <a href="#">Stock Market</a>
-              </li>
-              <li>
-                <a href="#">Travel</a>
-              </li>
-              <li>
-                <a href="#">Culture</a>
-              </li>
-            </ul>
+            <a href="#">US</a>
           </li>
           <li class="expandable">
-            <div class="menu-item"><a href="#">Coupons</a></div>
-            <ul>
-              <li>
-                <a href="#">Food</a>
-              </li>
-              <li>
-                <a href="#">Auto</a>
-              </li>
-              <li>
-                <a href="#">Insurance</a>
-              </li>
-            </ul>
+            <a href="#">World</a>
           </li>
           <li class="expandable">
-            <div class="menu-item"><a href="#">Videos</a></div>
-            <ul>
-              <li>
-                <a href="#">Documentaries</a>
-              </li>
-              <li>
-                <a href="#">Interviews</a>
-              </li>
-              <li>
-                <a href="#">Clips</a>
-              </li>
-              <li>
-                <a href="#">Advertisements</a>
-              </li>
-            </ul>
+            <a href="#">Politics</a>
+          </li>
+          <li class="expandable">
+            <a href="#">Style</a>
+          </li>
+          <li class="expandable">
+            <a href="#">Beauty</a>
+          </li>
+          <li class="expandable">
+            <a href="#">Sports</a>
+          </li>
+          <li class="expandable">
+            <a href="#">Science</a>
+          </li>
+          <li class="expandable">
+            <a href="#">Tech</a>
+          </li>
+          <li class="expandable">
+            <a href="#">Fashion</a>
+          </li>
+          <li class="expandable">
+            <a href="#">Business</a>
+          </li> s
+          <li class="expandable">
+            <a href="#">Videos</a>
+          </li>
+          <li class="expandable">
+            <a href="#">Coupons</a>
           </li>
         </ul>
       </nav>
@@ -164,10 +140,9 @@
 
   <!-- Main Story -->
   <div id="news-template" v-cloak>
-
+    <a v-bind:href="story.source.url" class="source-name">{{ story.source.name }}</a> 
     <h1>{{ story.title }}</h1> 
     <h2>{{ story.subtitle }}</h2>
-
     <header class="component">
       <img v-bind:src="story.image.url" class="main-image">
       <div class="safe-area">
@@ -178,9 +153,8 @@
     </header>
 
     <main>
-      <a v-bind:href="story.source.url" class="source-name">{{ story.source.name }}</a> <hr>
-      <div class="caption">{{ story.image.caption }}</div>
 
+      <div class="caption">{{ story.image.caption }}</div>
       <h3>{{ story.date }}</h3>
 
       <h5>By Michelle Smith</h5>
@@ -238,21 +212,47 @@
 <script src="https://abesiemsen.github.io/layout2020spring-resources/projects/news-story-template/data.js"></script>
 
 <script>
-      new Vue({
-        el: '#news-site-header',
-        data: {
-          menuIsOpen: false
-        },
-        methods: {
-          toggleTheHamburgerMenu: function() {
-            this.menuIsOpen = !this.menuIsOpen
-          }
-        }
-      })
-    </script>
+  new Vue({
+    el: '#news-site-header',
+    data: {
+      menuIsOpen: false
+    },
+    methods: {
+      toggleTheHamburgerMenu: function() {
+        this.menuIsOpen = !this.menuIsOpen
+      }
+    }
+  })
+</script>
 
-    <!-- Script that adds 'expandable' capability for sub-menus. -->
-    <script>
+<script>
+  
+
+// var expandables = document.getElementsByClassName('expandable');
+
+// // for every line in expandable we will define xpandable. will run once for every item matched above
+// // trigger element with element a, give back results. querying asking for reference to a tag
+// // if there's a click on this element, make function go
+// for (let expandable of expandables) {
+//   let triggerElement = expandable.querySelector('a')
+//   triggerElement.addEventListener('click', function(event){
+
+//     event.preventDefault();
+//     expandable.classList.toggle('expanded')
+//   })
+
+  
+// }
+
+// function closeAllExcept(clickedExpandable){
+//   for(let expandable of expandables){
+//     if (expandable !== clickedExpandable){
+//       expandable.classlist.remove('expanded')
+//     }
+//   }
+// }
+
+<script>
       
       var expandables = document.getElementsByClassName('expandable');
       
@@ -274,6 +274,8 @@
       }
 
     </script>
+
+</script>
 
 </body>
 </html>
