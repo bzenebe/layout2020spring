@@ -1,0 +1,193 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>News Story Template</title>
+    <style>[v-cloak] { display: none; } img {max-width: 100%;}</style>
+  </head>
+ 
+  <body>
+
+    <!-- Site Header -->
+    <header id="news-site-header" class="top-bar">
+
+      <div class="safe-area">
+        
+
+
+      
+      
+
+      <div class="ham"><button v-on:click="toggleTheHamburgerMenu()">hamburger</button></div>
+
+      <!-- I want this class to exist on this div but only wheen menu is open -->
+      <div class="menu-container" v-bind:class="{ 'menu-is-open': menuIsOpen }">
+        <nav>
+          <ul class="top-nav">
+            <li class="expandable">
+              <a href="#">News</a>
+              <ul>
+                <li>
+                  <a href="#">Headlines</a>
+                </li>
+                <li>
+                  <a href="#">Politics</a>
+                </li>
+                <li>
+                  <a href="#">Science</a>
+                </li>
+                <li>
+                  <a href="#">Entertainment</a>
+                </li>
+              </ul>
+            </li>
+            <li class="expandable">
+              <a href="#">Opinion</a>
+              <ul>
+                <li>
+                  <a href="#">Columns</a>
+                </li>
+                <li>
+                  <a href="#">Letters</a>
+                </li>
+              </ul>
+            </li>
+            <li class="expandable">
+              <a href="#">Sports</a>
+              <ul>
+                <li>
+                  <a href="#">Baseball</a>
+                </li>
+                <li>
+                  <a href="#">Football</a>
+                </li>
+                <li>
+                  <a href="#">Basketball</a>
+                </li>
+                <li>
+                  <a href="#">Hockey</a>
+                </li>
+                <li>
+                  <a href="#">Soccer</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </nav></div>
+
+     <!--  <div>B's Daily News</div>
+
+      <div>Account</div>
+
+ -->
+      </div>
+    </header>
+
+
+
+
+
+
+
+
+    <div id="news-template" v-cloak>
+      
+      <!-- Main Story -->
+      {{ story.title }}
+      {{ story.subtitle }}
+      {{ story.date }}
+      <span v-for="tag in story.tags">{{ tag }}</span>
+      <img v-bind:src="story.image.url">
+      {{ story.image.caption }}
+      <a v-bind:href="story.source.url">{{ story.source.name }}</a>
+      <span v-html="story.teaser"></span>
+      <span v-html="story.content"></span>
+
+      <!-- Related Stories-->
+      <h2>Related Stories</h2>
+      <ul>
+        <li v-for="relatedStory in relatedStories">
+          <div v-on:click="load(relatedStory)">
+            {{ relatedStory.title }}
+            <img v-bind:src="relatedStory.image.url">
+          </div>
+        </li>
+      </ul>
+
+      <!-- Top 3 stories-->
+      <h2>Top Stories</h2>
+      <ul>
+        <li v-for="topStory in topStories(3)">
+          <div v-on:click="load(topStory)">
+            {{ topStory.title }}
+            <img v-bind:src="topStory.image.url">
+          </div>
+        </li>
+      </ul>
+
+      <!-- Stories with same tag -->
+      <h2>Same Tag</h2>
+      <ul>
+        <li v-for="taggedStory in storiesWithSameTag">
+          <div v-on:click="load(taggedStory)">
+            {{ taggedStory.title }}
+            <img v-bind:src="taggedStory.image.url">
+          </div>
+        </li>
+      </ul>
+
+      <!-- Useful debugging info, you can comment this section out when you don't need it. -->
+      <!-- <pre>The story object: {{ story | json }}</pre> -->
+      <!-- <pre>The relatedStories array: {{ relatedStories | json }}</pre> -->
+      <!-- <pre>The topStories array: {{ topStories(2) | json }}</pre> -->
+      <!-- <pre>The storiesWithSameTag array: {{ storiesWithSameTag | json }}</pre> -->
+
+    </div>
+
+    <!-- Scripts here are what load the Vue library, and the actual story content. -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://abesiemsen.github.io/layout2020spring-resources/projects/news-story-template/data.js"></script>
+    
+    <!-- Script that adds Vue capability to #news-site-header (This can, and should, really be in your own .js file) -->
+    <script>
+      new Vue({
+        el: '#news-site-header',
+        data: {
+          menuIsOpen: false
+        },
+        methods: {
+          toggleTheHamburgerMenu: function() {
+            this.menuIsOpen = !this.menuIsOpen
+          }
+        }
+      })
+    </script>
+
+    <!-- Script that adds 'expandable' capability for sub-menus. -->
+    <script>
+      
+      var expandables = document.getElementsByClassName('expandable');
+      
+      for (let expandable of expandables) {
+        let triggerElement = expandable.querySelector('a');
+        triggerElement.addEventListener('click', function(event) {
+          event.preventDefault();
+          closeAllExcept(expandable);
+          expandable.classList.toggle('expanded');
+        })
+      }
+
+      function closeAllExcept(clickedExpandable) {
+        for (let expandable of expandables) {
+          if (expandable !== clickedExpandable) {
+            expandable.classList.remove('expanded')
+          }
+        }
+      }
+
+    </script>
+    
+  </body>
+</html>

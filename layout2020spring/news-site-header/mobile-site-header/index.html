@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/styles.css">
+  <title>News Story Template</title>
+  <link href="https://fonts.googleapis.com/css?family=Anton&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Anton|Bebas+Neue&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Cabin&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Playfair+Display&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Noto+Serif+SC&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Forum&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Scheherazade&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Oranienbaum&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Cormorant+Infant&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+</head>
+<body>
+
+
+  <!-- Site Header -->
+  <header id="news-site-header">
+    <div v-on:click="toggleTheHamburgerMenu()">
+      <div class="ham"></div>
+      <div class="ham"></div>
+      <div class="ham"></div>
+    </div>
+    <div v-show="menuIsOpen">
+      <nav>
+        <ul>
+          <li class="menu-items">
+            <div class="sign-in"><a href="sign-in">Sign In</a></div>
+            
+            <a href="#">US</a>
+            <a href="#">World</a>
+            <a href="#">Politics</a>
+            <a href="#">Style</a>
+            <a href="#">Beauty</a>
+            <a href="#">Sports</a>
+            <a href="#">Science</a>
+            <a href="#">Tech</a>
+            <a href="#">Fashion</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+
+
+
+  <!-- Main Story -->
+  <div id="news-template" v-cloak>
+    <a v-bind:href="story.source.url" class="source-name">{{ story.source.name }}</a> 
+    <h1>{{ story.title }}</h1> 
+    <h2>{{ story.subtitle }}</h2>
+    <header class="component">
+      <img v-bind:src="story.image.url" class="main-image">
+      <div class="safe-area">
+
+
+      </div>
+
+    </header>
+
+    <main>
+
+      <div class="caption">{{ story.image.caption }}</div>
+      <h3>{{ story.date }}</h3>
+
+      <h5>By Michelle Smith</h5>
+      <a href="#" class="fa fa-facebook"></a>
+      <a href="#" class="fa fa-twitter"></a>
+
+    </section>
+    <hr>
+    <span v-html="story.teaser" class="teaser"></span>
+    <hr>
+  </section>
+</section>
+<span v-html="story.content" class="content"></span>
+</section>
+<span v-for="tag in story.tags" class="tags">{{ tag }}</span>
+</main>
+
+<!-- Related Stories-->
+<h4>Related Stories</h4>
+
+
+<div class="divider">
+
+  <ul class="related-stories" >
+
+    <li v-for="relatedStory in relatedStories" class="related-story">
+
+      <div class="related-story-title">
+
+        {{ relatedStory.title }}
+
+      </div>
+
+      <div class="thumbnail">
+
+        <img v-bind:src="relatedStory.image.url">
+
+      </div>
+
+    </li>
+
+  </ul>
+
+</div>
+
+
+
+</div>
+
+<hr>
+
+<br>
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://abesiemsen.github.io/layout2020spring-resources/projects/news-story-template/data.js"></script>
+
+<script>
+  new Vue({
+    el: '#news-site-header',
+    data: {
+      menuIsOpen: false
+    },
+    methods: {
+      toggleTheHamburgerMenu: function() {
+        this.menuIsOpen = !this.menuIsOpen
+      }
+    }
+  })
+</script>
+
+
+</body>
+</html>
+

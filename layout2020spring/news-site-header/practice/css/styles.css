@@ -1,0 +1,115 @@
+body{
+  margin: 5rem 0;
+}
+
+@media (max-width: 640px){
+  body{
+  margin: 9rem 0;
+}
+}
+.top-bar {
+  position: fixed;
+  background-color: white;
+  border-bottom: 1px solid rgba(0, 0, 0, .2);
+  width: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  height: 100px;
+}
+
+@media (max-width: 640px){
+  .menu-container {
+    width: 300px;
+    height: 100vh;
+    overflow-y: auto;
+    background-color: #ccc;
+    position: fixed;
+    right:0;
+    top: 0;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s, visibility 0.3s, transform 0.3s;
+    transform: translateX(20px);
+  }
+}
+
+
+.menu-container.menu-is-open {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0);
+}
+
+
+@media (min-width: 641px){
+.top-nav {
+  margin:0;
+  padding: 0;
+  display: flex;
+  list-style: none;
+  justify-content: flex-end;
+}
+
+.top-nav li {
+  margin:0;
+  padding: 0;
+  display: block;
+  list-style: none;
+}
+
+.top-nav > li > a {
+ padding: 30px;
+ text-decoration: none;
+ display: block;
+}
+
+.expandable > ul {
+
+  position: absolute;
+  background-color: none;
+  padding:0;
+
+}
+
+.expandable a {
+  text-decoration: none;
+  padding: 10px;
+  background-color: #eee;
+  border-bottom: 1px solid #eee;
+  display: block;
+  
+}
+
+}
+
+
+
+/*an expandable is not displayed unless it is expanded, where it is displayed block.*/
+.expandable > ul {
+  display: none;
+}
+
+.expandable.expanded > ul {
+  display: block;
+}
+.safe-area {
+  width: 90%;
+  max-width: 960px;
+  margin: 0 auto;
+
+}
+
+
+
+.visible-header {
+  display: flex;
+}
+
+
+
+
+
+
+
+
