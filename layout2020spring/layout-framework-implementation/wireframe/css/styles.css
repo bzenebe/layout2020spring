@@ -29,20 +29,19 @@ a{
 
 img {
 	height: 750px;
+	max-width: 60%;
 	padding: 20px;
 	object-fit: cover;
 	margin: 0px ;
-
 }
 
 .text {
-
 	position: fixed;
 	color: white;
 	text-align: left;
-	font-size: 18px;
+	font-size: 16px;
 	left: 65%;
 	width: 26%;
-	top: 50%;
+	top: 15%;
 	font-family: 'Raleway', sans-serif;
 }
