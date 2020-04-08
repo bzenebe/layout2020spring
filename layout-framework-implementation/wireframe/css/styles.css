@@ -1,0 +1,48 @@
+
+	body {
+	background-color: black;
+	display: inline-block;
+	margin: 0;
+	align-content: center;
+	text-align: center;
+	display: flex;
+	flex-direction: row;
+	max-height: 1000px;
+	width: 70%;
+	height: 70%;
+	flex-wrap: wrap;
+	margin: auto 0;
+	justify-content: space-around;
+	display: inline-block;
+	position: block;
+}
+.c{
+	text-align: center;
+	margin-top: 10px;
+}
+
+
+a{
+	color: yellow;
+	text-decoration: none;
+}
+
+img {
+	height: 750px;
+	padding: 20px;
+	object-fit: cover;
+	margin: 0px ;
+
+}
+
+.text {
+
+	position: fixed;
+	color: white;
+	text-align: left;
+	font-size: 18px;
+	left: 65%;
+	width: 26%;
+	top: 50%;
+	font-family: 'Raleway', sans-serif;
+}
