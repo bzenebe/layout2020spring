@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+body {
+	margin:0;
+	padding: 0;
+}
+
+:root{
+	--color-black: #000000;
+	--font-rale: 'Source Sans Pro', sans-serif;;
+}
+
+.font-staat{
+	font:normal 400 18px var(--font-staat);
+}
+
+.bgcolor-black {
+
+	background-color:  black;
+}
+.name{
+	width: 100%;
+}
+
+#header nav {
+	height: 100vh;
+}
